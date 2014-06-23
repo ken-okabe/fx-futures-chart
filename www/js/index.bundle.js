@@ -5720,6 +5720,9 @@ $(document)
     {
       var rand = Math.random();
 
+
+      var reutersUrl = 'http://jp.reuters.com/investing/currencies';
+
       var EURUSDurl = 'http://quotes.esignal.com/esignalprod//esigchartspon?cont=6E+%23F&period=D&size=1250x600&bartype=CANDLE&bardensity=LOW&STUDY=VOI&STUDY0=1&STUDY1=1&showextendednames=true&random=' + rand;
 
       var USDJPYurl = 'http://quotes.esignal.com/esignalprod//esigchartspon?cont=6J+%23F&period=D&size=1250x600&bartype=CANDLE&bardensity=LOW&STUDY=VOI&STUDY0=1&STUDY1=1&showextendednames=true&random=' + rand;
@@ -5727,6 +5730,8 @@ $(document)
       var GBPUSDurl = 'http://quotes.esignal.com/esignalprod//esigchartspon?cont=6B+%23F&period=D&size=1250x600&bartype=CANDLE&bardensity=LOW&STUDY=VOI&STUDY0=1&STUDY1=1&showextendednames=true&random=' + rand;
 
       var EURJPYurl = 'http://quotes.esignal.com/esignalprod//esigchartspon?cont=RY+%23F&period=D&size=1250x600&bartype=CANDLE&bardensity=LOW&STUDY=VOI&STUDY0=1&STUDY1=1&showextendednames=true&random=' + rand;
+
+      $('#reuters').load(reutersUrl);
 
       var $imgEURUSD = $('<img/>').attr('src', EURUSDurl);
       $('#EURUSD').html($imgEURUSD);
@@ -5744,7 +5749,7 @@ $(document)
 
     reload();
     var timeSequence = B
-      .interval(60000);
+      .interval(600000);
 
     timeSequence //数学世界
     .onValue(function() //物理世界にマッピングする＝計算（コンピューティング）
