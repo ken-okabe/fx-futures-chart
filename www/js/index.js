@@ -65,7 +65,7 @@ $(document)
 
     reload();
     var timeSequence = B
-      .interval(60000);
+      .interval(600000);
 
     timeSequence //数学世界
     .onValue(function() //物理世界にマッピングする＝計算（コンピューティング）
