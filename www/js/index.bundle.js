@@ -5723,7 +5723,7 @@ $(document)
 
       var EURUSDurl = 'http://quotes.esignal.com/esignalprod//esigchartspon?cont=6E+%23F&period=D&size=1250x600&bartype=CANDLE&bardensity=LOW&STUDY=VOI&STUDY0=1&STUDY1=1&showextendednames=true&random=' + rand;
 
-      var USDJPYurl = 'http://quotes.esignal.com/esignalprod//esigchartspon?cont=6J+%23F&period=D&size=1250x600&bartype=CANDLE&bardensity=LOW&STUDY=VOI&STUDY0=1&STUDY1=1&showextendednames=true&random=' + rand;
+      var JPYUSDurl = 'http://quotes.esignal.com/esignalprod//esigchartspon?cont=6J+%23F&period=D&size=1250x600&bartype=CANDLE&bardensity=LOW&STUDY=VOI&STUDY0=1&STUDY1=1&showextendednames=true&random=' + rand;
 
       var GBPUSDurl = 'http://quotes.esignal.com/esignalprod//esigchartspon?cont=6B+%23F&period=D&size=1250x600&bartype=CANDLE&bardensity=LOW&STUDY=VOI&STUDY0=1&STUDY1=1&showextendednames=true&random=' + rand;
 
@@ -5732,8 +5732,8 @@ $(document)
       var $imgEURUSD = $('<img/>').attr('src', EURUSDurl);
       $('#EURUSD').html($imgEURUSD);
 
-      var $imgUSDJPY = $('<img/>').attr('src', USDJPYurl);
-      $('#USDJPY').html($imgUSDJPY);
+      var $imgJPYUSD = $('<img/>').attr('src', JPYUSDurl);
+      $('#JPYUSD').html($imgJPYUSD);
 
       var $imgGBPUSD = $('<img/>').attr('src', GBPUSDurl);
       $('#GBPUSD').html($imgGBPUSD);
@@ -5745,7 +5745,7 @@ $(document)
 
       var EURUSDwurl = 'http://quotes.esignal.com/esignalprod//esigchartspon?cont=6E+%23F&period=W&size=1250x600&bartype=CANDLE&bardensity=LOW&STUDY=VOI&STUDY0=1&STUDY1=1&showextendednames=true&random=' + rand;
 
-      var USDJPYwurl = 'http://quotes.esignal.com/esignalprod//esigchartspon?cont=6J+%23F&period=W&size=1250x600&bartype=CANDLE&bardensity=LOW&STUDY=VOI&STUDY0=1&STUDY1=1&showextendednames=true&random=' + rand;
+      var JPYUSDwurl = 'http://quotes.esignal.com/esignalprod//esigchartspon?cont=6J+%23F&period=W&size=1250x600&bartype=CANDLE&bardensity=LOW&STUDY=VOI&STUDY0=1&STUDY1=1&showextendednames=true&random=' + rand;
 
       var GBPUSDwurl = 'http://quotes.esignal.com/esignalprod//esigchartspon?cont=6B+%23F&period=W&size=1250x600&bartype=CANDLE&bardensity=LOW&STUDY=VOI&STUDY0=1&STUDY1=1&showextendednames=true&random=' + rand;
 
@@ -5754,8 +5754,8 @@ $(document)
       var $imgEURUSDw = $('<img/>').attr('src', EURUSDwurl);
       $('#EURUSDw').html($imgEURUSDw);
 
-      var $imgUSDJPYw = $('<img/>').attr('src', USDJPYwurl);
-      $('#USDJPYw').html($imgUSDJPYw);
+      var $imgJPYUSDw = $('<img/>').attr('src', JPYUSDwurl);
+      $('#JPYUSDw').html($imgJPYUSDw);
 
       var $imgGBPUSDw = $('<img/>').attr('src', GBPUSDwurl);
       $('#GBPUSDw').html($imgGBPUSDw);
