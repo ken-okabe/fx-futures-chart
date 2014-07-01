@@ -48,7 +48,14 @@ $(document)
 
       var GBPUSDurl = 'http://quotes.esignal.com/esignalprod//esigchartspon?cont=6B+%23F&period=D&size=1150x500&bartype=CANDLE&bardensity=LOW&STUDY=VOI&STUDY0=1&STUDY1=1&showextendednames=true&random=' + rand;
 
-      var EURJPYurl = 'http://quotes.esignal.com/esignalprod//esigchartspon?cont=RY+%23F&period=D&size=1150x500&bartype=CANDLE&bardensity=LOW&STUDY=VOI&STUDY0=1&STUDY1=1&showextendednames=true&random=' + rand;
+      var CHFUSDurl = 'http://quotes.esignal.com/esignalprod//esigchartspon?cont=6S+%23F&period=D&size=1150x500&bartype=CANDLE&bardensity=LOW&STUDY=VOI&STUDY0=1&STUDY1=1&showextendednames=true&random=' + rand;
+
+      var AUDUSDurl = 'http://quotes.esignal.com/esignalprod//esigchartspon?cont=6A+%23F&period=D&size=1150x500&bartype=CANDLE&bardensity=LOW&STUDY=VOI&STUDY0=1&STUDY1=1&showextendednames=true&random=' + rand;
+
+      var NZDUSDurl = 'http://quotes.esignal.com/esignalprod//esigchartspon?cont=6N+%23F&period=D&size=1150x500&bartype=CANDLE&bardensity=LOW&STUDY=VOI&STUDY0=1&STUDY1=1&showextendednames=true&random=' + rand;
+
+      var CADUSDurl = 'http://quotes.esignal.com/esignalprod//esigchartspon?cont=6C+%23F&period=D&size=1150x500&bartype=CANDLE&bardensity=LOW&STUDY=VOI&STUDY0=1&STUDY1=1&showextendednames=true&random=' + rand;
+
 
       var $imgEURUSD = $('<img/>').attr('src', EURUSDurl);
       $('#EURUSD').html($imgEURUSD);
@@ -59,8 +66,17 @@ $(document)
       var $imgGBPUSD = $('<img/>').attr('src', GBPUSDurl);
       $('#GBPUSD').html($imgGBPUSD);
 
-      var $imgEURJPY = $('<img/>').attr('src', EURJPYurl);
-      $('#EURJPY').html($imgEURJPY);
+      var $imgCHFUSD = $('<img/>').attr('src', CHFUSDurl);
+      $('#CHFUSD').html($imgCHFUSD);
+
+      var $imgAUDUSD = $('<img/>').attr('src', AUDUSDurl);
+      $('#AUDUSD').html($imgAUDUSD);
+
+      var $imgNZDUSD = $('<img/>').attr('src', NZDUSDurl);
+      $('#NZDUSD').html($imgNZDUSD);
+
+      var $imgCADUSD = $('<img/>').attr('src', CADUSDurl);
+      $('#CADUSD').html($imgCADUSD);
 
 
 
@@ -70,7 +86,13 @@ $(document)
 
       var GBPUSDwurl = 'http://quotes.esignal.com/esignalprod//esigchartspon?cont=6B+%23F&period=W&size=1150x500&bartype=CANDLE&bardensity=LOW&STUDY=VOI&STUDY0=1&STUDY1=1&showextendednames=true&random=' + rand;
 
-      var EURJPYwurl = 'http://quotes.esignal.com/esignalprod//esigchartspon?cont=RY+%23F&period=W&size=1150x500&bartype=CANDLE&bardensity=LOW&STUDY=VOI&STUDY0=1&STUDY1=1&showextendednames=true&random=' + rand;
+      var CHFUSDwurl = 'http://quotes.esignal.com/esignalprod//esigchartspon?cont=6S+%23F&period=W&size=1150x500&bartype=CANDLE&bardensity=LOW&STUDY=VOI&STUDY0=1&STUDY1=1&showextendednames=true&random=' + rand;
+
+      var AUDUSDwurl = 'http://quotes.esignal.com/esignalprod//esigchartspon?cont=6A+%23F&period=W&size=1150x500&bartype=CANDLE&bardensity=LOW&STUDY=VOI&STUDY0=1&STUDY1=1&showextendednames=true&random=' + rand;
+
+      var NZDUSDwurl = 'http://quotes.esignal.com/esignalprod//esigchartspon?cont=6N+%23F&period=W&size=1150x500&bartype=CANDLE&bardensity=LOW&STUDY=VOI&STUDY0=1&STUDY1=1&showextendednames=true&random=' + rand;
+
+      var CADUSDwurl = 'http://quotes.esignal.com/esignalprod//esigchartspon?cont=6C+%23F&period=W&size=1150x500&bartype=CANDLE&bardensity=LOW&STUDY=VOI&STUDY0=1&STUDY1=1&showextendednames=true&random=' + rand;
 
       var $imgEURUSDw = $('<img/>').attr('src', EURUSDwurl);
       $('#EURUSDw').html($imgEURUSDw);
@@ -81,8 +103,17 @@ $(document)
       var $imgGBPUSDw = $('<img/>').attr('src', GBPUSDwurl);
       $('#GBPUSDw').html($imgGBPUSDw);
 
-      var $imgEURJPYw = $('<img/>').attr('src', EURJPYwurl);
-      $('#EURJPYw').html($imgEURJPYw);
+      var $imgCHFUSDw = $('<img/>').attr('src', CHFUSDwurl);
+      $('#CHFUSDw').html($imgCHFUSDw);
+
+      var $imgAUDUSDw = $('<img/>').attr('src', AUDUSDwurl);
+      $('#AUDUSDw').html($imgAUDUSDw);
+
+      var $imgNZDUSDw = $('<img/>').attr('src', NZDUSDwurl);
+      $('#NZDUSDw').html($imgNZDUSDw);
+
+      var $imgCADUSDw = $('<img/>').attr('src', CADUSDwurl);
+      $('#CADUSDw').html($imgCADUSDw);
 
     };
 
