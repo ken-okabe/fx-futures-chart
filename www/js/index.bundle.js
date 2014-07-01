@@ -5805,6 +5805,35 @@ $(document)
       {
         reload();
       });
+
+
+    //tab change
+
+    var activateTab = function(tab)
+    {
+      $('.nav-tabs a[href="#' + tab + '"]').tab('show');
+    };
+
+    $('#WEEK').click(function(e)
+    {
+      var url = '' + e.target;
+
+      var pair = url
+        .split('#')[1]
+        .split('w')[0];
+
+      activateTab(pair);
+    });
+
+    $('#DAY').click(function(e)
+    {
+      var url = '' + e.target;
+
+      var pair = url
+        .split('#')[1] + 'w';
+
+      activateTab(pair);
+    });
   });
 
 },{"baconjs":1,"moment":2}]},{},[3])
