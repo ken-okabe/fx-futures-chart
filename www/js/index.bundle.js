@@ -5794,6 +5794,48 @@ $(document)
       var $imgCADUSDw = $('<img/>').attr('src', CADUSDwurl);
       $('#CADUSDw').html($imgCADUSDw);
 
+
+
+
+
+
+      var EURUSD60url = 'http://quotes.esignal.com/esignalprod//esigchartspon?cont=6E+%23F&period=V&varminutes=60&size=1150x500&bartype=CANDLE&bardensity=MEDIUM&STUDY=VOI&STUDY0=1&STUDY1=1&showextendednames=true&random=' + rand;
+
+      var JPYUSD60url = 'http://quotes.esignal.com/esignalprod//esigchartspon?cont=6J+%23F&period=V&varminutes=60&size=1150x500&bartype=CANDLE&bardensity=MEDIUM&STUDY=VOI&STUDY0=1&STUDY1=1&showextendednames=true&random=' + rand;
+
+      var GBPUSD60url = 'http://quotes.esignal.com/esignalprod//esigchartspon?cont=6B+%23F&period=V&varminutes=60&size=1150x500&bartype=CANDLE&bardensity=MEDIUM&STUDY=VOI&STUDY0=1&STUDY1=1&showextendednames=true&random=' + rand;
+
+      var CHFUSD60url = 'http://quotes.esignal.com/esignalprod//esigchartspon?cont=6S+%23F&period=V&varminutes=60&size=1150x500&bartype=CANDLE&bardensity=MEDIUM&STUDY=VOI&STUDY0=1&STUDY1=1&showextendednames=true&random=' + rand;
+
+      var AUDUSD60url = 'http://quotes.esignal.com/esignalprod//esigchartspon?cont=6A+%23F&period=V&varminutes=60&size=1150x500&bartype=CANDLE&bardensity=MEDIUM&STUDY=VOI&STUDY0=1&STUDY1=1&showextendednames=true&random=' + rand;
+
+      var NZDUSD60url = 'http://quotes.esignal.com/esignalprod//esigchartspon?cont=6N+%23F&period=V&varminutes=60&size=1150x500&bartype=CANDLE&bardensity=MEDIUM&STUDY=VOI&STUDY0=1&STUDY1=1&showextendednames=true&random=' + rand;
+
+      var CADUSD60url = 'http://quotes.esignal.com/esignalprod//esigchartspon?cont=6C+%23F&period=V&varminutes=60&size=1150x500&bartype=CANDLE&bardensity=MEDIUM&STUDY=VOI&STUDY0=1&STUDY1=1&showextendednames=true&random=' + rand;
+
+
+      var $imgEURUSD60 = $('<img/>').attr('src', EURUSD60url);
+      $('#EURUSD60').html($imgEURUSD60);
+
+      var $imgJPYUSD60 = $('<img/>').attr('src', JPYUSD60url);
+      $('#JPYUSD60').html($imgJPYUSD60);
+
+      var $imgGBPUSD60 = $('<img/>').attr('src', GBPUSD60url);
+      $('#GBPUSD60').html($imgGBPUSD60);
+
+      var $imgCHFUSD60 = $('<img/>').attr('src', CHFUSD60url);
+      $('#CHFUSD60').html($imgCHFUSD60);
+
+      var $imgAUDUSD60 = $('<img/>').attr('src', AUDUSD60url);
+      $('#AUDUSD60').html($imgAUDUSD60);
+
+      var $imgNZDUSD60 = $('<img/>').attr('src', NZDUSD60url);
+      $('#NZDUSD60').html($imgNZDUSD60);
+
+      var $imgCADUSD60 = $('<img/>').attr('src', CADUSD60url);
+      $('#CADUSD60').html($imgCADUSD60);
+
+
     };
 
     reload();
@@ -5822,17 +5864,38 @@ $(document)
         .split('#')[1]
         .split('w')[0];
 
-      activateTab(pair);
+      var pairD = pair;
+      var pairH = pair + '60';
+
+      activateTab(pairD);
+      activateTab(pairH);
     });
 
     $('#DAY').click(function(e)
     {
       var url = '' + e.target;
-
       var pair = url
-        .split('#')[1] + 'w';
+        .split('#')[1];
 
-      activateTab(pair);
+      var pairW = pair + 'w';
+      var pairH = pair + '60';
+
+      activateTab(pairW);
+      activateTab(pairH);
+    });
+
+    $('#H').click(function(e)
+    {
+      var url = '' + e.target;
+      var pair = url
+        .split('#')[1]
+        .split('60')[0];
+
+      var pairW = pair + 'w';
+      var pairD = pair;
+
+      activateTab(pairW);
+      activateTab(pairD);
     });
   });
 
