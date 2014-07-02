@@ -218,4 +218,81 @@ $(document)
       activateTab(pairW);
       activateTab(pairD);
     });
+
+    //--------
+    var moment = require('moment-timezone');
+
+    var time = [];
+
+    var doTime = function(n)
+    {
+      var hours = time[n].hours();
+      var mins = time[n].minutes();
+      var seconds = time[n].seconds();
+
+      var hdegree = (360 / 12) * hours + (30 / 60 * mins);
+      var mdegree = (360 / 60) * mins + (6 / 60 * seconds);
+      var sdegree = (360 / 60) * seconds;
+
+      var hrotate = "rotate(" + hdegree + "deg)";
+      var mrotate = "rotate(" + mdegree + "deg)";
+      var srotate = "rotate(" + sdegree + "deg)";
+
+      $(".hour").eq(n).css(
+      {
+        "-moz-transform": hrotate,
+        "-webkit-transform": hrotate
+      });
+
+      $(".min").eq(n).css(
+      {
+        "-moz-transform": mrotate,
+        "-webkit-transform": mrotate
+      });
+
+      $(".sec").eq(n).css(
+      {
+        "-moz-transform": srotate,
+        "-webkit-transform": srotate
+      });
+
+      $('p').eq(n * 3 + 1).html(time[n].format('YYYY/MM/DD HH:mm:ss dddd'));
+
+      var dst;
+      if (time[n].isDST())
+      {
+        dst = '(DayLight Saving Time)';
+      }
+      else
+      {
+        dst = '';
+      }
+
+      $('p').eq(n * 3 + 2).html("<small>" + dst + "</small>");
+    };
+
+    var clock = function()
+    {　
+      time[0] = moment().tz('America/New_York');
+      time[1] = moment().tz('Europe/London');
+      time[2] = moment().tz('Europe/London').add(2, 'hours');
+      time[3] = moment().tz('Asia/Tokyo');　
+      time.map(function(t, i)
+      {
+        doTime(i);
+      });
+
+
+    };
+
+    var __timeSequence2 = B
+      .interval(500);
+
+    __timeSequence2 //数学世界
+    .onValue(function() //物理世界にマッピングする＝計算（コンピューティング）
+      {
+        clock();
+      });
+
+    //-------
   });
