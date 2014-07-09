@@ -5686,7 +5686,7 @@ var take = function(n)
 module.exports = take;
 
 },{}],69:[function(require,module,exports){
-(function (global,__dirname){
+(function (__dirname){
 /* jshint node: true */
 /* jshint jquery: true */
 /* jshint sub: true */
@@ -5710,11 +5710,7 @@ var type = function(obj)
 };
 
 //----------
-var g = global;
-g.F = {};
-var F = g.F;
 
-g.type = type;
 
 var fs = require('fs');
 
@@ -5766,7 +5762,7 @@ var spacetime_lazy = function()
   var core = function(seq)
   {
     log('======core called=======');
-    var newObj = require('clone')(g.objTemplate);
+    var newObj = require('clone')(objTemplate);
 
     /*  log('--seq--');
     log(seq);
@@ -5839,7 +5835,7 @@ var spacetime_lazy = function()
 
 module.exports = spacetime_lazy;
 
-}).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},"/../../node_modules/spacetime/node_modules/spacetime-lazy")
+}).call(this,"/../../node_modules/spacetime/node_modules/spacetime-lazy")
 },{"./loadModulesFactoryBrowserify":6,"clone":7,"fs":81,"memoizee":13}],70:[function(require,module,exports){
 /* jshint node: true */
 /* jshint jquery: true */
