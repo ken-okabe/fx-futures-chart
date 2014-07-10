@@ -206,7 +206,7 @@ $(document)
     };
 
     reload();
-    var __timeSequence = __().interval(60000);
+    var __timeSequence = __().interval(30000);
 
     __timeSequence //数学世界
     .compute(function() //物理世界にマッピングする＝計算（コンピューティング）
