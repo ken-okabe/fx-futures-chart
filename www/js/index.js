@@ -13,7 +13,7 @@ log('init5');
 var _ = require('spacetime').lazy();
 var __ = require('spacetime').timeline();
 
-var moment = require('moment');
+//var moment = require('moment');
 var moment = require('moment-timezone');
 var g = window;
 
@@ -23,8 +23,15 @@ g.io = {};
 $(document)
   .ready(function()
   {
+    $('#label').hide();
     var reload = function()
     {
+
+      $('#time').html(moment()
+        .tz('Europe/London')
+        .add(2, 'hours')
+        .format('YYYY/MM/DD HH:mm:ss dddd'));
+
       var rand = Math.random();
 
 
@@ -46,43 +53,43 @@ $(document)
       var $imgEURUSD = $('<img/>').attr('src', EURUSDurl);
       imagesLoaded($imgEURUSD, function()
       {
-        $('#EURUSD').html($imgEURUSD);
+        $('#EURUSDday').html($imgEURUSD);
       });
 
       var $imgJPYUSD = $('<img/>').attr('src', JPYUSDurl);
       imagesLoaded($imgJPYUSD, function()
       {
-        $('#JPYUSD').html($imgJPYUSD);
+        $('#JPYUSDday').html($imgJPYUSD);
       });
 
       var $imgGBPUSD = $('<img/>').attr('src', GBPUSDurl);
       imagesLoaded($imgGBPUSD, function()
       {
-        $('#GBPUSD').html($imgGBPUSD);
+        $('#GBPUSDday').html($imgGBPUSD);
       });
 
       var $imgCHFUSD = $('<img/>').attr('src', CHFUSDurl);
       imagesLoaded($imgCHFUSD, function()
       {
-        $('#CHFUSD').html($imgCHFUSD);
+        $('#CHFUSDday').html($imgCHFUSD);
       });
 
       var $imgAUDUSD = $('<img/>').attr('src', AUDUSDurl);
       imagesLoaded($imgAUDUSD, function()
       {
-        $('#AUDUSD').html($imgAUDUSD);
+        $('#AUDUSDday').html($imgAUDUSD);
       });
 
       var $imgNZDUSD = $('<img/>').attr('src', NZDUSDurl);
       imagesLoaded($imgNZDUSD, function()
       {
-        $('#NZDUSD').html($imgNZDUSD);
+        $('#NZDUSDday').html($imgNZDUSD);
       });
 
       var $imgCADUSD = $('<img/>').attr('src', CADUSDurl);
       imagesLoaded($imgCADUSD, function()
       {
-        $('#CADUSD').html($imgCADUSD);
+        $('#CADUSDday').html($imgCADUSD);
       });
 
 
@@ -105,43 +112,43 @@ $(document)
       var $imgEURUSDw = $('<img/>').attr('src', EURUSDwurl);
       imagesLoaded($imgEURUSDw, function()
       {
-        $('#EURUSDw').html($imgEURUSDw);
+        $('#EURUSDweek').html($imgEURUSDw);
       });
 
       var $imgJPYUSDw = $('<img/>').attr('src', JPYUSDwurl);
       imagesLoaded($imgJPYUSDw, function()
       {
-        $('#JPYUSDw').html($imgJPYUSDw);
+        $('#JPYUSDweek').html($imgJPYUSDw);
       });
 
       var $imgGBPUSDw = $('<img/>').attr('src', GBPUSDwurl);
       imagesLoaded($imgGBPUSDw, function()
       {
-        $('#GBPUSDw').html($imgGBPUSDw);
+        $('#GBPUSDweek').html($imgGBPUSDw);
       });
 
       var $imgCHFUSDw = $('<img/>').attr('src', CHFUSDwurl);
       imagesLoaded($imgCHFUSDw, function()
       {
-        $('#CHFUSDw').html($imgCHFUSDw);
+        $('#CHFUSDweek').html($imgCHFUSDw);
       });
 
       var $imgAUDUSDw = $('<img/>').attr('src', AUDUSDwurl);
       imagesLoaded($imgAUDUSDw, function()
       {
-        $('#AUDUSDw').html($imgAUDUSDw);
+        $('#AUDUSDweek').html($imgAUDUSDw);
       });
 
       var $imgNZDUSDw = $('<img/>').attr('src', NZDUSDwurl);
       imagesLoaded($imgNZDUSDw, function()
       {
-        $('#NZDUSDw').html($imgNZDUSDw);
+        $('#NZDUSDweek').html($imgNZDUSDw);
       });
 
       var $imgCADUSDw = $('<img/>').attr('src', CADUSDwurl);
       imagesLoaded($imgCADUSDw, function()
       {
-        $('#CADUSDw').html($imgCADUSDw);
+        $('#CADUSDweek').html($imgCADUSDw);
       });
 
 
@@ -206,7 +213,7 @@ $(document)
     };
 
     reload();
-    var __timeSequence = __().interval(30000);
+    var __timeSequence = __().interval(180000);
 
     __timeSequence //数学世界
     .compute(function() //物理世界にマッピングする＝計算（コンピューティング）
@@ -217,52 +224,134 @@ $(document)
 
     //tab change
 
+
+
+    var __currentPair = {
+      val: null
+    };
+
+
     var activateTab = function(tab)
     {
       $('.nav-tabs a[href="#' + tab + '"]').tab('show');
+
     };
 
-    $('#WEEK').click(function(e)
+    require('watchjs').watch(__currentPair, 'val', function()
     {
-      var url = '' + e.target;
 
-      var pair = url
-        .split('#')[1]
-        .split('w')[0];
-
-      var pairD = pair;
-      var pairH = pair + '30';
-
-      activateTab(pairD);
-      activateTab(pairH);
-    });
-
-    $('#DAY').click(function(e)
-    {
-      var url = '' + e.target;
-      var pair = url
-        .split('#')[1];
-
-      var pairW = pair + 'w';
-      var pairH = pair + '30';
-
-      activateTab(pairW);
-      activateTab(pairH);
-    });
-
-    $('#H').click(function(e)
-    {
-      var url = '' + e.target;
-      var pair = url
-        .split('#')[1]
-        .split('30')[0];
-
-      var pairW = pair + 'w';
-      var pairD = pair;
+      var pairW = __currentPair.val + 'week';
+      var pairD = __currentPair.val + 'day';
+      var pairM30 = __currentPair.val + '30';
 
       activateTab(pairW);
       activateTab(pairD);
+      activateTab(pairM30);
+
+      $('#pair').html(__currentPair.val);
+
+      if (__currentPair.val === 'EURUSD')
+        $('#rev').html('-----');
+      if (__currentPair.val === 'JPYUSD')
+        $('#rev').html('REVERSED');
+      if (__currentPair.val === 'GBPUSD')
+        $('#rev').html('-----');
+      if (__currentPair.val === 'CHFUSD')
+        $('#rev').html('REVERSED');
+      if (__currentPair.val === 'AUDUSD')
+        $('#rev').html('-----');
+      if (__currentPair.val === 'NZDUSD')
+        $('#rev').html('-----');
+      if (__currentPair.val === 'CADUSD')
+        $('#rev').html('REVERSED');
+
     });
+
+
+    $('a[data-toggle="tab"]').on('shown.bs.tab', function(e)
+    {
+      var url = "" + e.target;
+
+      if (url.indexOf('clock') !== -1)
+      {
+        $('#label').hide();
+
+      }
+      else if (url.indexOf('WEEK') !== -1)
+      {
+        $('#label').show();
+
+        if (__currentPair.val === null)
+        {
+          // alert('null pair');
+
+          __currentPair.val = 'EURUSD';
+        }
+
+        $('#period').html('WEEK');
+
+
+      }
+      else if (url.indexOf('DAY') !== -1)
+      {
+        $('#label').show();
+
+        if (__currentPair.val === null)
+        {
+          //   alert('null pair');
+
+          __currentPair.val = 'EURUSD';
+        }
+
+        $('#period').html('DAY');
+
+      }
+      else if (url.indexOf('M30') !== -1)
+      {
+        $('#label').show();
+
+        if (__currentPair.val === null)
+        {
+          //  alert('null pair');
+
+          __currentPair.val = 'EURUSD';
+        }
+
+        $('#period').html('30M');
+
+      }
+      else if (url.indexOf('week') !== -1)
+      {
+        $('#label').show();
+
+        __currentPair.val = url
+          .split('#')[1]
+          .split('week')[0];
+
+      }
+
+      else if (url.indexOf('day') !== -1)
+      {
+        $('#label').show();
+
+        __currentPair.val = url
+          .split('#')[1]
+          .split('day')[0];
+
+      }
+      else if (url.indexOf('30') !== -1)
+      {
+        $('#label').show();
+
+        __currentPair.val = url
+          .split('#')[1]
+          .split('30')[0];
+
+      }
+
+    });
+
+
 
     //--------
 

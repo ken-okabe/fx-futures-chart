@@ -27,6 +27,12 @@
 </head>
 
 <body>
+  <div id="label">
+    <div id="pair"></div>
+    <div id="rev"></div>
+    <div id="period"></div>
+    <div id="time"></div>
+  </div>
   <!-- Nav tabs -->
   <ul class="nav nav-tabs">
     <li class="active"><a href="#clock" data-toggle="tab">WorldClock</a>
@@ -35,7 +41,7 @@
     </li>
     <li><a href="#DAY" data-toggle="tab">DAY</a>
     </li>
-    <li><a href="#H" data-toggle="tab">30Min</a>
+    <li><a href="#M30" data-toggle="tab">30Min</a>
     </li>
   </ul>
 
@@ -117,43 +123,36 @@
 
 
 
-
-
-
-
-
-
-
     </div>
     <div class="tab-pane" id="WEEK">
 
       <ul class="nav nav-tabs">
 
-        <li class="active"><a href="#EURUSDw" data-toggle="tab">EURUSD (W)</a>
+        <li><a href="#EURUSDweek" data-toggle="tab">EURUSD (W)</a>
         </li>
-        <li><a href="#JPYUSDw" data-toggle="tab">JPYUSD (W)</a>
+        <li><a href="#JPYUSDweek" data-toggle="tab">JPYUSD (W)</a>
         </li>
-        <li><a href="#GBPUSDw" data-toggle="tab">GBPUSD (W)</a>
+        <li><a href="#GBPUSDweek" data-toggle="tab">GBPUSD (W)</a>
         </li>
-        <li><a href="#CHFUSDw" data-toggle="tab">CHFUSD (W)</a>
+        <li><a href="#CHFUSDweek" data-toggle="tab">CHFUSD (W)</a>
         </li>
-        <li><a href="#AUDUSDw" data-toggle="tab">AUDUSD (W)</a>
+        <li><a href="#AUDUSDweek" data-toggle="tab">AUDUSD (W)</a>
         </li>
-        <li><a href="#NZDUSDw" data-toggle="tab">NZDUSD (W)</a>
+        <li><a href="#NZDUSDweek" data-toggle="tab">NZDUSD (W)</a>
         </li>
-        <li><a href="#CADUSDw" data-toggle="tab">CADUSD (W)</a>
+        <li><a href="#CADUSDweek" data-toggle="tab">CADUSD (W)</a>
         </li>
       </ul>
 
       <!-- Tab panes -->
       <div class="tab-content">
-        <div class="tab-pane active" id="EURUSDw">EURUSDw</div>
-        <div class="tab-pane" id="JPYUSDw">JPYUSDw</div>
-        <div class="tab-pane" id="GBPUSDw">GBPUSDw</div>
-        <div class="tab-pane" id="CHFUSDw">CHFUSDw</div>
-        <div class="tab-pane" id="AUDUSDw">AUDUSDw</div>
-        <div class="tab-pane" id="NZDUSDw">NZDUSDw</div>
-        <div class="tab-pane" id="CADUSDw">CADUSDw</div>
+        <div class="tab-pane" id="EURUSDweek">EURUSDw</div>
+        <div class="tab-pane" id="JPYUSDweek">JPYUSDw</div>
+        <div class="tab-pane" id="GBPUSDweek">GBPUSDw</div>
+        <div class="tab-pane" id="CHFUSDweek">CHFUSDw</div>
+        <div class="tab-pane" id="AUDUSDweek">AUDUSDw</div>
+        <div class="tab-pane" id="NZDUSDweek">NZDUSDw</div>
+        <div class="tab-pane" id="CADUSDweek">CADUSDw</div>
       </div>
 
     </div>
@@ -161,42 +160,42 @@
 
       <ul class="nav nav-tabs">
 
-        <li class="active"><a href="#EURUSD" data-toggle="tab">EURUSD (D)</a>
+        <li><a href="#EURUSDday" data-toggle="tab">EURUSD (D)</a>
         </li>
-        <li><a href="#JPYUSD" data-toggle="tab">JPYUSD (D)</a>
+        <li><a href="#JPYUSDday" data-toggle="tab">JPYUSD (D)</a>
         </li>
-        <li><a href="#GBPUSD" data-toggle="tab">GBPUSD (D)</a>
+        <li><a href="#GBPUSDday" data-toggle="tab">GBPUSD (D)</a>
         </li>
-        <li><a href="#CHFUSD" data-toggle="tab">CHFUSD (D)</a>
+        <li><a href="#CHFUSDday" data-toggle="tab">CHFUSD (D)</a>
         </li>
-        <li><a href="#AUDUSD" data-toggle="tab">AUDUSD (D)</a>
+        <li><a href="#AUDUSDday" data-toggle="tab">AUDUSD (D)</a>
         </li>
-        <li><a href="#NZDUSD" data-toggle="tab">NZDUSD (D)</a>
+        <li><a href="#NZDUSDday" data-toggle="tab">NZDUSD (D)</a>
         </li>
-        <li><a href="#CADUSD" data-toggle="tab">CADUSD (D)</a>
+        <li><a href="#CADUSDday" data-toggle="tab">CADUSD (D)</a>
         </li>
 
       </ul>
 
       <!-- Tab panes -->
       <div class="tab-content">
-        <div class="tab-pane active" id="EURUSD">EURUSD</div>
-        <div class="tab-pane" id="JPYUSD">JPYUSD</div>
-        <div class="tab-pane" id="GBPUSD">GBPUSD</div>
-        <div class="tab-pane" id="CHFUSD">CHFUSD</div>
-        <div class="tab-pane" id="AUDUSD">AUDUSD</div>
-        <div class="tab-pane" id="NZDUSD">NZDUSD</div>
-        <div class="tab-pane" id="CADUSD">CADUSD</div>
+        <div class="tab-pane" id="EURUSDday">EURUSD</div>
+        <div class="tab-pane" id="JPYUSDday">JPYUSD</div>
+        <div class="tab-pane" id="GBPUSDday">GBPUSD</div>
+        <div class="tab-pane" id="CHFUSDday">CHFUSD</div>
+        <div class="tab-pane" id="AUDUSDday">AUDUSD</div>
+        <div class="tab-pane" id="NZDUSDday">NZDUSD</div>
+        <div class="tab-pane" id="CADUSDday">CADUSD</div>
 
       </div>
 
     </div>
 
-    <div class="tab-pane" id="H">
+    <div class="tab-pane" id="M30">
 
       <ul class="nav nav-tabs">
 
-        <li class="active"><a href="#EURUSD30" data-toggle="tab">EURUSD (30)</a>
+        <li><a href="#EURUSD30" data-toggle="tab">EURUSD (30)</a>
         </li>
         <li><a href="#JPYUSD30" data-toggle="tab">JPYUSD (30)</a>
         </li>
@@ -215,7 +214,7 @@
 
       <!-- Tab panes -->
       <div class="tab-content">
-        <div class="tab-pane active" id="EURUSD30">EURUSD30</div>
+        <div class="tab-pane" id="EURUSD30">EURUSD30</div>
         <div class="tab-pane" id="JPYUSD30">JPYUSD30</div>
         <div class="tab-pane" id="GBPUSD30">GBPUSD30</div>
         <div class="tab-pane" id="CHFUSD30">CHFUSD30</div>
