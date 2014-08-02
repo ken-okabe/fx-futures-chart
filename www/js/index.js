@@ -32,11 +32,11 @@ $(document)
      memo = 'input text here';
     }
 
-   $('#textarea1').html(memo);
+   $('#textarea1').html(text);
 
    document.getElementById('textarea1').addEventListener('input',
    function()
-   { localStorage.setItem('memo',$('#textarea1').html()); }, false);
+   { localStorage.setItem('memo',$('#textarea1').text()); }, false);
 
 
     $('#label').hide();
