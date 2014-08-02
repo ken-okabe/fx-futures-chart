@@ -6707,9 +6707,25 @@ var g = window;
 g.io = {};
 
 
+
+
 $(document)
   .ready(function()
   {
+   var memo =  localStorage['memo'];
+
+   if (memo === undefined)
+    {
+     memo = 'input text here';
+    }
+
+   $('#textarea1').text(memo);
+
+   document.getElementById('textarea1').addEventListener('input',
+   function()
+   { localStorage.setItem('memo',$('#textarea1').text()); }, false);
+
+
     $('#label').hide();
     var reload = function()
     {
@@ -6959,7 +6975,12 @@ $(document)
     {
       var url = "" + e.target;
 
-      if (url.indexOf('clock') !== -1)
+if (url.indexOf('memo') !== -1)
+{
+  $('#label').hide();
+
+}
+     else if (url.indexOf('clock') !== -1)
       {
         $('#label').hide();
 
