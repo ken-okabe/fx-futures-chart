@@ -50,6 +50,7 @@ $(document)
 
       var rand = Math.random();
 
+var DIXurl = 'http://quotes.esignal.com/esignalprod//esigchartspon?cont=DX+%23F&period=D&size=1150x500&bartype=CANDLE&bardensity=LOW&STUDY=VOI&STUDY0=1&STUDY1=1&showextendednames=true&random=' + rand;
 
       var EURUSDurl = 'http://quotes.esignal.com/esignalprod//esigchartspon?cont=6E+%23F&period=D&size=1150x500&bartype=CANDLE&bardensity=LOW&STUDY=VOI&STUDY0=1&STUDY1=1&showextendednames=true&random=' + rand;
 
@@ -64,6 +65,12 @@ $(document)
       var NZDUSDurl = 'http://quotes.esignal.com/esignalprod//esigchartspon?cont=6N+%23F&period=D&size=1150x500&bartype=CANDLE&bardensity=LOW&STUDY=VOI&STUDY0=1&STUDY1=1&showextendednames=true&random=' + rand;
 
       var CADUSDurl = 'http://quotes.esignal.com/esignalprod//esigchartspon?cont=6C+%23F&period=D&size=1150x500&bartype=CANDLE&bardensity=LOW&STUDY=VOI&STUDY0=1&STUDY1=1&showextendednames=true&random=' + rand;
+
+var $imgDIX = $('<img/>').attr('src', DIXurl);
+imagesLoaded($imgDIX, function()
+{
+  $('#DIXday').html($imgDIX);
+});
 
 
       var $imgEURUSD = $('<img/>').attr('src', EURUSDurl);
@@ -109,7 +116,7 @@ $(document)
       });
 
 
-
+var DIXwurl = 'http://quotes.esignal.com/esignalprod//esigchartspon?cont=DX+%23F&period=W&size=1150x500&bartype=CANDLE&bardensity=LOW&STUDY=VOI&STUDY0=1&STUDY1=1&showextendednames=true&random=' + rand;
 
       var EURUSDwurl = 'http://quotes.esignal.com/esignalprod//esigchartspon?cont=6E+%23F&period=W&size=1150x500&bartype=CANDLE&bardensity=LOW&STUDY=VOI&STUDY0=1&STUDY1=1&showextendednames=true&random=' + rand;
 
@@ -124,6 +131,12 @@ $(document)
       var NZDUSDwurl = 'http://quotes.esignal.com/esignalprod//esigchartspon?cont=6N+%23F&period=W&size=1150x500&bartype=CANDLE&bardensity=LOW&STUDY=VOI&STUDY0=1&STUDY1=1&showextendednames=true&random=' + rand;
 
       var CADUSDwurl = 'http://quotes.esignal.com/esignalprod//esigchartspon?cont=6C+%23F&period=W&size=1150x500&bartype=CANDLE&bardensity=LOW&STUDY=VOI&STUDY0=1&STUDY1=1&showextendednames=true&random=' + rand;
+
+var $imgDIXw = $('<img/>').attr('src', DIXwurl);
+imagesLoaded($imgDIXw, function()
+{
+  $('#DIXweek').html($imgDIXw);
+});
 
       var $imgEURUSDw = $('<img/>').attr('src', EURUSDwurl);
       imagesLoaded($imgEURUSDw, function()
@@ -169,6 +182,8 @@ $(document)
 
 
 
+var DIX30url = 'http://quotes.esignal.com/esignalprod//esigchartspon?cont=DX+%23F&period=V&varminutes=30&size=1150x500&bartype=CANDLE&bardensity=MEDIUM&STUDY=VOI&STUDY0=1&STUDY1=1&showextendednames=true&random=' + rand;
+
       var EURUSD30url = 'http://quotes.esignal.com/esignalprod//esigchartspon?cont=6E+%23F&period=V&varminutes=30&size=1150x500&bartype=CANDLE&bardensity=MEDIUM&STUDY=VOI&STUDY0=1&STUDY1=1&showextendednames=true&random=' + rand;
 
       var JPYUSD30url = 'http://quotes.esignal.com/esignalprod//esigchartspon?cont=6J+%23F&period=V&varminutes=30&size=1150x500&bartype=CANDLE&bardensity=MEDIUM&STUDY=VOI&STUDY0=1&STUDY1=1&showextendednames=true&random=' + rand;
@@ -182,6 +197,12 @@ $(document)
       var NZDUSD30url = 'http://quotes.esignal.com/esignalprod//esigchartspon?cont=6N+%23F&period=V&varminutes=30&size=1150x500&bartype=CANDLE&bardensity=MEDIUM&STUDY=VOI&STUDY0=1&STUDY1=1&showextendednames=true&random=' + rand;
 
       var CADUSD30url = 'http://quotes.esignal.com/esignalprod//esigchartspon?cont=6C+%23F&period=V&varminutes=30&size=1150x500&bartype=CANDLE&bardensity=MEDIUM&STUDY=VOI&STUDY0=1&STUDY1=1&showextendednames=true&random=' + rand;
+
+var $imgDIX30 = $('<img/>').attr('src', DIX30url);
+imagesLoaded($imgDIX30, function()
+{
+  $('#DIX30').html($imgDIX30);
+});
 
 
       var $imgEURUSD30 = $('<img/>').attr('src', EURUSD30url);
@@ -266,6 +287,8 @@ $(document)
 
       $('#pair').html(__currentPair.val);
 
+if (__currentPair.val === 'DIX')
+  $('#rev').html('-----');
       if (__currentPair.val === 'EURUSD')
         $('#rev').html('-----');
       if (__currentPair.val === 'JPYUSD')
