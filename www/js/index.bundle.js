@@ -6749,7 +6749,6 @@ var DIXurl = 'http://quotes.esignal.com/esignalprod//esigchartspon?cont=DX+%23F&
 
       var AUDUSDurl = 'http://quotes.esignal.com/esignalprod//esigchartspon?cont=6A+%23F&period=D&size=1150x500&bartype=CANDLE&bardensity=LOW&STUDY=VOI&STUDY0=1&STUDY1=1&showextendednames=true&random=' + rand;
 
-      var NZDUSDurl = 'http://quotes.esignal.com/esignalprod//esigchartspon?cont=6N+%23F&period=D&size=1150x500&bartype=CANDLE&bardensity=LOW&STUDY=VOI&STUDY0=1&STUDY1=1&showextendednames=true&random=' + rand;
 
       var CADUSDurl = 'http://quotes.esignal.com/esignalprod//esigchartspon?cont=6C+%23F&period=D&size=1150x500&bartype=CANDLE&bardensity=LOW&STUDY=VOI&STUDY0=1&STUDY1=1&showextendednames=true&random=' + rand;
 
@@ -6790,11 +6789,6 @@ imagesLoaded($imgDIX, function()
         $('#AUDUSDday').html($imgAUDUSD);
       });
 
-      var $imgNZDUSD = $('<img/>').attr('src', NZDUSDurl);
-      imagesLoaded($imgNZDUSD, function()
-      {
-        $('#NZDUSDday').html($imgNZDUSD);
-      });
 
       var $imgCADUSD = $('<img/>').attr('src', CADUSDurl);
       imagesLoaded($imgCADUSD, function()
@@ -6815,7 +6809,6 @@ var DIXwurl = 'http://quotes.esignal.com/esignalprod//esigchartspon?cont=DX+%23F
 
       var AUDUSDwurl = 'http://quotes.esignal.com/esignalprod//esigchartspon?cont=6A+%23F&period=W&size=1150x500&bartype=CANDLE&bardensity=LOW&STUDY=VOI&STUDY0=1&STUDY1=1&showextendednames=true&random=' + rand;
 
-      var NZDUSDwurl = 'http://quotes.esignal.com/esignalprod//esigchartspon?cont=6N+%23F&period=W&size=1150x500&bartype=CANDLE&bardensity=LOW&STUDY=VOI&STUDY0=1&STUDY1=1&showextendednames=true&random=' + rand;
 
       var CADUSDwurl = 'http://quotes.esignal.com/esignalprod//esigchartspon?cont=6C+%23F&period=W&size=1150x500&bartype=CANDLE&bardensity=LOW&STUDY=VOI&STUDY0=1&STUDY1=1&showextendednames=true&random=' + rand;
 
@@ -6855,12 +6848,6 @@ imagesLoaded($imgDIXw, function()
         $('#AUDUSDweek').html($imgAUDUSDw);
       });
 
-      var $imgNZDUSDw = $('<img/>').attr('src', NZDUSDwurl);
-      imagesLoaded($imgNZDUSDw, function()
-      {
-        $('#NZDUSDweek').html($imgNZDUSDw);
-      });
-
       var $imgCADUSDw = $('<img/>').attr('src', CADUSDwurl);
       imagesLoaded($imgCADUSDw, function()
       {
@@ -6881,7 +6868,6 @@ var DIX30url = 'http://quotes.esignal.com/esignalprod//esigchartspon?cont=DX+%23
 
       var AUDUSD30url = 'http://quotes.esignal.com/esignalprod//esigchartspon?cont=6A+%23F&period=V&varminutes=30&size=1150x500&bartype=CANDLE&bardensity=MEDIUM&STUDY=VOI&STUDY0=1&STUDY1=1&showextendednames=true&random=' + rand;
 
-      var NZDUSD30url = 'http://quotes.esignal.com/esignalprod//esigchartspon?cont=6N+%23F&period=V&varminutes=30&size=1150x500&bartype=CANDLE&bardensity=MEDIUM&STUDY=VOI&STUDY0=1&STUDY1=1&showextendednames=true&random=' + rand;
 
       var CADUSD30url = 'http://quotes.esignal.com/esignalprod//esigchartspon?cont=6C+%23F&period=V&varminutes=30&size=1150x500&bartype=CANDLE&bardensity=MEDIUM&STUDY=VOI&STUDY0=1&STUDY1=1&showextendednames=true&random=' + rand;
 
@@ -6920,12 +6906,6 @@ imagesLoaded($imgDIX30, function()
       imagesLoaded($imgAUDUSD30, function()
       {
         $('#AUDUSD30').html($imgAUDUSD30);
-      });
-
-      var $imgNZDUSD30 = $('<img/>').attr('src', NZDUSD30url);
-      imagesLoaded($imgNZDUSD30, function()
-      {
-        $('#NZDUSD30').html($imgNZDUSD30);
       });
 
       var $imgCADUSD30 = $('<img/>').attr('src', CADUSD30url);
@@ -6986,8 +6966,6 @@ if (__currentPair.val === 'DIX')
         $('#rev').html('REVERSED');
       if (__currentPair.val === 'AUDUSD')
         $('#rev').html('-----');
-      if (__currentPair.val === 'NZDUSD')
-        $('#rev').html('-----');
       if (__currentPair.val === 'CADUSD')
         $('#rev').html('REVERSED');
 
@@ -7016,7 +6994,7 @@ if (url.indexOf('memo') !== -1)
         {
           // alert('null pair');
 
-          __currentPair.val = 'EURUSD';
+          __currentPair.val = 'DIX';
         }
 
         $('#period').html('WEEK');
@@ -7031,7 +7009,7 @@ if (url.indexOf('memo') !== -1)
         {
           //   alert('null pair');
 
-          __currentPair.val = 'EURUSD';
+          __currentPair.val = 'DIX';
         }
 
         $('#period').html('DAY');
@@ -7045,7 +7023,7 @@ if (url.indexOf('memo') !== -1)
         {
           //  alert('null pair');
 
-          __currentPair.val = 'EURUSD';
+          __currentPair.val = 'DIX';
         }
 
         $('#period').html('30M');
